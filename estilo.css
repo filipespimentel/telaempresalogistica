@@ -1,0 +1,77 @@
+body, ul { padding: 0; margin: 0; }
+ 
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+ 
+.item {
+    flex-grow: 1;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    list-style: none;
+    transition: all .7s ease-in-out;
+}
+ 
+.item:hover {
+    flex-grow: 10;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+ 
+.item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+ 
+.text {
+    font-size: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+ 
+.item:hover .text {
+    font-size: 32px;
+    text-shadow: 2px 2px 12px black;
+}
+ 
+.primeiro {
+    background-image: url(https://image.winudf.com/v2/image/Y29tLmJlc3RydWNrLkJlc3RUcnVja1dhbGxwYXBlcl9zY3JlZW5fM18xNTM3NzYzODM4XzA5OA/screen-3.jpg?fakeurl=1&type=.jpg);
+}
+ 
+.segundo {
+    background-image: url(https://s1.1zoom.me/b5750/595/Mercedes-Benz_Bus_Motion_526871_1920x1080.jpg);
+} 
+.terceiro {
+    background-image: url(https://blog.sold.com.br/wp-content/uploads/2018/01/direct-geral_640-640x334.jpg);
+}
+ 
+.quarto {
+    background-image: url(https://image.freepik.com/fotos-gratis/carro-na-estrada-com-movimento-desfocar-o-fundo_1112-3112.jpg);
+}
+ 
+@media screen and (max-width: 768px) {
+ 
+    .container {
+        flex-direction: column;
+    }
+ 
+    .text {
+        font-size: 16px;
+    }
+ 
+}
